@@ -11,8 +11,8 @@ library(data.table)
 library(tidyverse)
 #connect to db
 conep <- DBI::dbConnect(odbc::odbc(), Driver = "PostgreSQL ANSI(x64)", 
-                        Server = "172.16.0.50", database = "epace", UID = ("epace_read"), 
-                        PWD = ("epace"), port = 5432, timeout = 10)
+                        Server = "", database = "", UID = (""), 
+                        PWD = (""), port = 5432, timeout = 10)
 #get job substraight
 JobSS <- dbGetQuery(conep, "select ccmasterid, ccjobpart, jcmasterid, icmasterid from jobcost where postingstatus='Closed'and icmasterid !='0' and icmasterid !='MTADHCLREMO05412' and icmasterid !='OVL004CLEMBOSS05412' and icmasterid !='OVL004CLEMBOSS06112' and icmasterid !='OVL005POLYPRM05112' and icmasterid !='VBN013W2S012612'
                     and icmasterid !='CV3M40CMW006012' and icmasterid !='CV3MIJ40C20W5412' and icmasterid !='PAB020SIGNWRIT04812' and icmasterid !='PP008TPQ2BO05712' and icmasterid !='PSV008RAMW05412' and icmasterid !='VBN0131SDULT05412' and icmasterid != 'VBN0131SDULT06312' and icmasterid != 'VBN013W2SBO05412' and icmasterid !='VMG020W04000120'
