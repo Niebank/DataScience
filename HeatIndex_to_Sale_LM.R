@@ -20,7 +20,7 @@ fit1 <- train(Salary ~ .,data = train1, method = "lm")
 Pred1<- predict(fit1, test1)
 
 #plot predicted on linear model
-Plotfit1 <- plot(test1$Years_of_Expertise, Pred1, xlab="HeatIndex", ylab="Predicted Sale")+abline(lm(Salary ~ Years_of_Expertise, data = simplinear))
+Plotfit1 <- plot(test1$Years_of_Expertise, Pred1, xlab="HeatIndex", ylab="Predicted Sale")+abline(lm(Miles ~ Age, data = simplinear))
 
 #Problem 2 - Multiple linear model
 
