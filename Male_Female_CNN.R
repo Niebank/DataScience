@@ -8,8 +8,8 @@ library(readr)
 
 data_dir <- unzip("C:/Users")
 
-maledsp <- readImage("ConvNet_dataset/training_set/male/male.2104.jpg")
-plot(dogdsp)
+maledsp <- readImage("dataset/training_set/male")
+plot(maledsp)
 
 
 class_names <- c('female','male')
